@@ -24,3 +24,9 @@
 		font-size: 1.1em;
 	}
 }
+
+.border-top {
+	border-top: 1px solid #A27C5F;
+	margin: $section-spacing 0 0;
+	padding-top: $section-spacing;
+}

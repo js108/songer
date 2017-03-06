@@ -59,10 +59,11 @@ end
 
 helpers do
   def markdownify(text)
-    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+    markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, footnotes: true, superscript: true)
 	markdown.render(text)
   end
 end
+
 
 # Methods defined in the helpers block are available in templates
 # helpers do
