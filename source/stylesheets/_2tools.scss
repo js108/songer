@@ -1,0 +1,43 @@
+// Responsive grid settings, works with the 'neat' gem
+
+@import "neat";
+
+$desktop: (
+	columns: 12,
+	gutter: 3rem,
+	media: 600px,
+	color: rgba(#00d4ff, 0.25),
+);
+
+$mobile: (
+	columns: 1,
+	gutter: 1rem,
+	media: 0px,
+	color: red,
+);
+
+body {
+
+  @include grid-media($mobile) {
+    .sidebar { @include grid-column(1); }
+    .content { @include grid-column(1); }
+    .footer__section { @include grid-column(1); }
+    .left { @include grid-column(1); }
+    .right { @include grid-column(1); }
+    .card  { @include grid-column(1); }
+    .row { @include grid-container;}
+  }
+  
+  @include grid-media($desktop) {
+    .left { @include grid-column(4); }
+    .right { @include grid-column(8); }
+    .left-push {@include grid-push(4);}
+    .card { @include grid-column(4);  }
+    .row { @include grid-container;}
+    .sidebar { @include grid-column(3); }
+    .content { @include grid-column(9); }
+    .footer__section { @include grid-column(4); }
+  }
+
+}
+

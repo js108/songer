@@ -1,0 +1,101 @@
+---
+title: Welcome to Middleman
+---
+<div class="home-main">
+
+	<div class="logo row border-bottom">
+		<div class="left"><img src="/images/logo-alt-2.svg"></div>		
+	</div>
+
+	<section class="border-bottom padding-bottom">
+		<div class="row">
+			<div class="left"><%= image_tag dato.about_home.image.url %></div>
+			<div class="right"><%= markdownify(dato.about_home.text) %></div>
+		</div>
+		<div class="row">
+			<div class="left-push right"><h2><a href="/services"><%= dato.services_home.title %></a></h2>
+			<%= markdownify(dato.services_home.text) %>
+			</div>
+		</div>
+	</section>
+
+<!-- Papers Section -->
+	<section class="border-bottom padding-bottom">
+		<div class="row">
+			<h2 class="left"><a href="/papers">Papers</a></h2>
+		</div>
+
+		<div class="row">
+			<% dato.papers.sort_by(&:position)[0...3].each do |paper| %>
+				<div class="card">
+					<h3><a href="/papers-full/<%= "#{paper.title.parameterize}" %>/index.html"><%= paper.title %></h3>
+					<% home_i = paper.home_image %>
+					<% if home_i %>
+						<%= image_tag home_i.url(w: 600, fit: :max), alt: home_i.alt %>
+					<% end %>
+					</a>
+				</div>
+			<% end %>
+		</div>
+
+		<div class="row">
+			<% dato.papers.sort_by(&:position)[3...6].each do |paper| %>
+				<div class="card">
+					<h3><a href="/papers/<%= "#{paper.title.parameterize}" %>/index.html"><%= paper.title %></h3>
+					<% home_i = paper.home_image %>
+					<% if home_i %>
+						<%= image_tag home_i.url(w: 600, fit: :max), alt: home_i.alt %>
+					<% end %>
+					</a>
+				</div>
+			<% end %>
+		</div>
+
+		<div class="row">
+			<% dato.papers.sort_by(&:position)[6...9].each do |paper| %>
+				<div class="card">
+					<h3><a href="/papers/<%= "#{paper.title.parameterize}" %>/index.html"><%= paper.title %></h3>
+					<% home_i = paper.home_image %>
+					<% if home_i %>
+						<%= image_tag home_i.url(w: 600, fit: :max), alt: home_i.alt %>
+					<% end %>
+					</a>
+				</div>
+			<% end %>
+		</div>
+	</section>
+
+
+<!-- newsletters Section -->
+	<section>
+		<div class="row">
+			<h2 class="left"><a href="/newsletters">Newsletters</a></h2>
+		</div>
+
+		<div class="row">
+			<% dato.newsletters.sort_by(&:position)[0...3].each do |newsletter| %>
+			<div class="card">
+				<h3><%= link_to newsletter.title, "/newsletters/#{newsletter.title.parameterize}/index.html" %></h3>
+			</div>
+			<% end %>
+		</div>
+
+		<div class="row">
+			<% dato.newsletters.sort_by(&:position)[3...6].each do |newsletter| %>
+			<div class="card">
+				<h3><%= link_to newsletter.title, "/newsletters/#{newsletter.title.parameterize}/index.html" %></h3>
+			</div>
+			<% end %>
+		</div>
+
+
+		<div class="row">
+			<% dato.newsletters.sort_by(&:position)[6...9].each do |newsletter| %>
+			<div class="card">
+				<h3><%= link_to newsletter.title, "/newsletters/#{newsletter.title.parameterize}/index.html" %></h3>
+			</div>
+			<% end %>
+		</div>
+	</section>
+
+</div>
