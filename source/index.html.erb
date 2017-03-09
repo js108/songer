@@ -7,22 +7,30 @@ title: Product-Oriented Coffee Specialists
 		<div class="left"><img src="/images/logo-alt-2.svg"></div>		
 	</div>
 
-	<section class="border-bottom padding-bottom">
+	<section class="intro border-bottom padding-bottom">
 		<div class="row">
 			<div class="left"><%= image_tag dato.about_home.image.url %></div>
-			<div class="right"><%= markdownify(dato.about_home.text) %></div>
-		</div>
-		<div class="row">
-			<div class="left-push right"><h2><a href="/services"><%= dato.services_home.title %></a></h2>
-			<%= markdownify(dato.services_home.text) %>
+			<div class="right">
+			<h1 class="highlight">Songer and Associates are product-oriented coffee specialists, testers, and tasters that go beyond information and advice to achieve bottom line results. </h1>
 			</div>
 		</div>
 	</section>
 
+	<section class="intro border-bottom padding-bottom">
+		<div class="row">
+			<div class="left-push mid-col">
+				<%= markdownify(dato.about_home.text) %>
+				<h2><a href="/services"><%= dato.services_home.title %></a></h2>
+				<%= markdownify(dato.services_home.text) %>
+			</div>
+		</div>
+	</section>
+
+
 <!-- Papers Section -->
 	<section class="border-bottom padding-bottom">
 		<div class="row">
-			<h2 class="left"><a href="/papers">Papers</a></h2>
+			<h2 class="left"><a href="/papers">White Papers</a></h2>
 		</div>
 
 		<div class="row">

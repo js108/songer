@@ -1,8 +1,8 @@
 ---
-title: Papers
+title: White Papers
 ---
 
-<h1>Papers</h1>
+<h1>White Papers</h1>
 <% dato.papers.sort_by(&:position)[0...3].each do |b| %>
 	<h2><%= link_to b.title, "/papers-full/#{b.title.parameterize}/index.html" %></h2>
 	<div class="excerpt">
@@ -17,7 +17,7 @@ title: Papers
 	</div>
 <% end %>
 
-------SUBSCRIBE--------
+<%= partial "sub" %>
 
 <% dato.papers.sort_by(&:position)[3...100].each do |b| %>
 	<h2><%= b.title %></h2>

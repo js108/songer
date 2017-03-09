@@ -25,18 +25,21 @@ body {
     .left { @include grid-column(1); }
     .right { @include grid-column(1); }
     .card  { @include grid-column(1); }
+    .mid-col { @include grid-column(1); }
     .row { @include grid-container;}
   }
   
   @include grid-media($desktop) {
+    .row { @include grid-container; }
     .left { @include grid-column(4); }
     .right { @include grid-column(8); }
-    .left-push {@include grid-push(4);}
     .card { @include grid-column(4);  }
-    .row { @include grid-container;}
     .sidebar { @include grid-column(3); }
     .content { @include grid-column(9); }
+    .mid-col { @include grid-column(10); }
     .footer__section { @include grid-column(4); }
+    .left-push {@include grid-push(1); }
+    .collapse { @include grid-collapse; }
   }
 
 }

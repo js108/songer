@@ -3,8 +3,27 @@ title: "Newsletters"
 ---
 
 <h1>Newsletters</h1>
-------SUBSCRIBE------
-<% dato.newsletters.each do |b| %>
+<% dato.newsletters.sort_by(&:position)[0...1].each do |b| %>
+	<h2><%= link_to b.title, "/newsletters/#{b.title.parameterize}/index.html" %></h2>
+	<% b.body.each do |e| %>
+		<% case e.item_type.api_key %>
+		<% when "subtitle" %>
+			<h2><%= e.subtitle %></h2>		
+		<% when "text" %>
+			<p><%= markdownify(e.text.truncate_words(108)) %>
+		<% when "image" %>
+			<%= image_tag e.image.url(w: 720, fit: :max), alt: e.image.alt %>
+		<% when "file" %>
+			<p><%= link_to e.title, e.file.url %></p>
+		<% when "video" %>
+			<%= e.video.url %>
+		<% end %>
+	<% end %>
+<% end %>
+
+<%= partial "sub" %>
+
+<% dato.newsletters.sort_by(&:position)[1...100].each do |b| %>
 	<h2><%= link_to b.title, "/newsletters/#{b.title.parameterize}/index.html" %></h2>
 	<% b.body.each do |e| %>
 		<% case e.item_type.api_key %>

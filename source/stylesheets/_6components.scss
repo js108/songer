@@ -8,12 +8,34 @@
 	margin-bottom: $section-spacing;
 }
 
+.border-top {
+	border-top: 1px solid #A27C5F;
+	margin: $section-spacing 0 0;
+	padding-top: $section-spacing;
+}
+
 .padding-bottom {
 	padding-bottom: $section-spacing;
 }
 
+.margin-bottom {
+	margin-bottom: $section-spacing;
+}
+
 .logo {
 	padding: 10px 0;
+}
+
+.highlight {
+	background: $secondary-color;
+	color: white;
+	display: inline;
+	line-height: 1.4;
+	box-shadow: 5px 0 0 $secondary-color, -5px 0 0 $secondary-color;
+    box-decoration-break: clone;
+	a {
+		color: white;
+	}
 }
 
 .excerpt {
@@ -25,14 +47,12 @@
 	}
 }
 
-.border-top {
-	border-top: 1px solid #A27C5F;
-	margin: $section-spacing 0 0;
-	padding-top: $section-spacing;
-}
-
 .caption {
 	font-family: $header-font;
 	font-weight: bold;
 	font-size: .8em;
+}
+
+.intro {
+
 }

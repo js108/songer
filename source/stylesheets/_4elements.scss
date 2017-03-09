@@ -2,6 +2,8 @@ body {
 	margin: 0 auto;
 	width: 100%;
 	max-width: 960px;
+	font-family: $body-font;
+	color: $primary-color;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -14,7 +16,6 @@ p, ul {
 	line-height: 1.5em;
 	letter-spacing: .05em;
 	margin-top: 0;
-	font-family: $body-font;
 }
 
 a {
