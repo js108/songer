@@ -19,6 +19,7 @@ $mobile: (
 body {
 
   @include grid-media($mobile) {
+    .row { @include grid-container;}
     .sidebar { @include grid-column(1); }
     .content { @include grid-column(1); }
     .footer__section { @include grid-column(1); }
@@ -26,7 +27,6 @@ body {
     .right { @include grid-column(1); }
     .card  { @include grid-column(1); }
     .mid-col { @include grid-column(1); }
-    .row { @include grid-container;}
   }
   
   @include grid-media($desktop) {

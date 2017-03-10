@@ -3,12 +3,11 @@ body {
 	width: 100%;
 	max-width: 960px;
 	font-family: $body-font;
-	color: $primary-color;
-		font-size: 1.1em;
+	color: $text-color;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: $primary-color;
+	color: $text-color;
 	margin-bottom: .1em;
 	font-family: $header-font;
 }
@@ -17,10 +16,11 @@ p, ul {
 	line-height: 1.5em;
 	letter-spacing: .05em;
 	margin-top: 0;
+	font-size: 1.1em;
 }
 
 a {
-	color: $secondary-color;
+	color: $primary-color;
 	text-decoration: none;
 }
 
