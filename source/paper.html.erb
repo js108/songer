@@ -6,7 +6,7 @@
 		<% when "caption" %>
 			<div class="caption"><%= e.caption %></div>		
 		<% when "text" %>
-			<p><%= markdownify(e.text.truncate_words(108)) %>
+			<%= markdownify(e.text.truncate_words(108)) %>
 		<% when "image" %>
 			<%= image_tag e.image.url(w: 720, fit: :max), alt: e.image.alt %>
 	<% end %>

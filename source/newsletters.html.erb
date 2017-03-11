@@ -10,7 +10,7 @@ title: "Newsletters"
 		<% when "subtitle" %>
 			<h2><%= e.subtitle %></h2>		
 		<% when "text" %>
-			<p><%= markdownify(e.text.truncate_words(108)) %>
+			<%= markdownify(e.text.truncate_words(108)) %>
 		<% when "image" %>
 			<%= image_tag e.image.url(w: 720, fit: :max), alt: e.image.alt %>
 		<% when "file" %>
@@ -30,7 +30,7 @@ title: "Newsletters"
 		<% when "subtitle" %>
 			<h2><%= e.subtitle %></h2>		
 		<% when "text" %>
-			<p><%= markdownify(e.text.truncate_words(108)) %>
+			<%= markdownify(e.text.truncate_words(108)) %>
 		<% when "image" %>
 			<%= image_tag e.image.url(w: 720, fit: :max), alt: e.image.alt %>
 		<% when "file" %>

@@ -3,11 +3,13 @@ title: Product-Oriented Coffee Specialists
 ---
 <div class="home-main">
 
+<!--logo section-->
 	<div class="logo row border-bottom">
 		<div class="left"><img src="/images/logo-alt.svg"></div>		
 	</div>
 
-	<section class="intro border-bottom padding-bottom">
+<!--highlight section-->
+	<section class="border-bottom padding-bottom">
 		<div class="row flex-container">
 			<div class="left"><%= image_tag dato.about_home.image.url %></div>
 			<div class="right">
@@ -16,7 +18,9 @@ title: Product-Oriented Coffee Specialists
 		</div>
 	</section>
 
-	<section class="intro border-bottom padding-bottom">
+<!--about/services section-->
+
+	<section class="border-bottom padding-bottom">
 		<div class="row">
 			<div class="left-push mid-col">
 				<h2 class="float-l margin-top-0 line-height-sm"><a class="border-right" href="/about"><%= dato.about_home.title %></a></h2>
@@ -102,7 +106,6 @@ title: Product-Oriented Coffee Specialists
 			</div>
 			<% end %>
 		</div>
-
 
 		<div class="row">
 			<% dato.newsletters.sort_by(&:position)[6...9].each do |newsletter| %>

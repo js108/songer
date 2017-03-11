@@ -11,6 +11,15 @@
     list-style-type: none;
 }
 
+.content {
+
+	margin-top: 10px;
+
+	h1 {
+		margin-top: 0;
+	}
+}
+
 .border-bottom {
 	border-bottom: $border-width solid $secondary-color;
 	margin-bottom: $section-spacing;
@@ -93,5 +102,5 @@
 }
 
 .margin-top-minus {
-	margin-top: -.09em;
+	margin-top: -.1em;
 }
