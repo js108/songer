@@ -2,8 +2,8 @@
 title: White Papers
 ---
 
-<h1 class="title-border">White Papers</h1>
-<% dato.papers.sort_by(&:position)[0...3].each do |b| %>
+<h1 class="border-bottom padding-bottom-sm margin-bottom-sm">White Papers</h1>
+<% dato.papers.sort_by(&:position)[0...1].each do |b| %>
 	<h2><%= link_to b.title, "/papers-full/#{b.title.parameterize}/index.html" %></h2>
 	<div class="excerpt">
 		<% b.body[0...1].each do |e| %>
@@ -19,7 +19,7 @@ title: White Papers
 
 <a name="subscribe"><%= partial "sub" %></a>
 
-<% dato.papers.sort_by(&:position)[3...100].each do |b| %>
+<% dato.papers.sort_by(&:position)[1...100].each do |b| %>
 	<h2><%= b.title %></h2>
 	<div class="excerpt">
 		<% b.body[0...1].each do |e| %>
@@ -30,6 +30,6 @@ title: White Papers
 				<%= image_tag e.image.url(w: 720, fit: :max), alt: e.image.alt %>
 			<% end %>
 		<% end %>
-		<p><a href="#subscribe">Subscribe to read this Paper</a></p>
+		<p><a href="#subscribe">Subscribe to Read This Paper</a></p>
 	</div>
 <% end %>

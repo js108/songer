@@ -44,9 +44,22 @@ title: Product-Oriented Coffee Specialists
 		</div>
 
 		<div class="row">
-			<% dato.papers.sort_by(&:position)[0...3].each do |paper| %>
+			<% dato.papers.sort_by(&:position)[0...1].each do |paper| %>
 				<div class="card">
-					<h3><a href="/papers-full/<%= "#{paper.title.parameterize}" %>/index.html"><%= paper.title %></h3>
+					<h3>
+						<span class="preview">Free Preview</span><p>
+						<a href="/papers-full/<%= "#{paper.title.parameterize}" %>/index.html"><%= paper.title %>
+					</h3>
+					<% home_i = paper.home_image %>
+					<% if home_i %>
+						<%= image_tag home_i.url(w: 600, fit: :max), alt: home_i.alt %>
+					<% end %>
+					</a>
+				</div>
+			<% end %>
+			<% dato.papers.sort_by(&:position)[1...3].each do |paper| %>
+				<div class="card">
+					<h3><a href="/papers/<%= "#{paper.title.parameterize}" %>/index.html"><%= paper.title %></h3>
 					<% home_i = paper.home_image %>
 					<% if home_i %>
 						<%= image_tag home_i.url(w: 600, fit: :max), alt: home_i.alt %>

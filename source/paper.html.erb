@@ -1,10 +1,8 @@
 <% current_page.data.title = paper.title %>
 
-<h1 class="title-border"><%= paper.title %></h1>
+<h1 class="border-bottom padding-bottom-sm margin-bottom-sm"><%= paper.title %></h1>
 <% paper.body[0...1].each do |e| %>
-	<% case e.item_type.api_key %>
-		<% when "caption" %>
-			<div class="caption"><%= e.caption %></div>		
+	<% case e.item_type.api_key %>		
 		<% when "text" %>
 			<%= markdownify(e.text.truncate_words(108)) %>
 		<% when "image" %>
@@ -13,3 +11,5 @@
 <% end %>
 
 <%= partial "sub" %>
+
+<p>Subscribe to Read This Paper</p>

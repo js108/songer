@@ -94,6 +94,14 @@
 	}
 }
 
+.preview {
+	background: $secondary-color;
+	color: white;
+	line-height: 1.4;
+	box-shadow: 5px 0 0 $secondary-color, -5px 0 0 $secondary-color;
+    box-decoration-break: clone;
+}
+
 .excerpt {	
 	margin-bottom: $space;
 

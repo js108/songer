@@ -2,7 +2,7 @@
 title: Services
 ---
 
-<h1 class="title-border">Services</h1>
+<h1 class="border-bottom padding-bottom-sm margin-bottom-sm">Services</h1>
 
 <% dato.services.each do |b| %>
 	<h2><%= link_to b.title, "/services/#{b.title.parameterize}/index.html" %></h2>
@@ -15,7 +15,7 @@ title: Services
 		<% when "image" %>
 			<%= image_tag e.image.url(w: 720, fit: :max), alt: e.image.alt %>
 		<% when "file" %>
-			<p><%= link_to e.title, e.file.url %></p>
+			<%= link_to e.title, e.file.url %>
 		<% when "video" %>
 			<%= e.video.url %>
 		<% end %>
