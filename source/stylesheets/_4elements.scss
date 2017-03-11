@@ -10,6 +10,7 @@ h1, h2, h3, h4, h5, h6 {
 	color: $text-color;
 	margin-bottom: .1em;
 	font-family: $header-font;
+	line-height: 1.3em;
 }
 
 p, ul {
@@ -17,6 +18,10 @@ p, ul {
 	letter-spacing: .05em;
 	margin-top: 0;
 	font-size: 1.1em;
+}
+
+li {
+	line-height: 1.5em;
 }
 
 a {

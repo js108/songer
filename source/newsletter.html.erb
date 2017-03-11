@@ -1,7 +1,7 @@
 <% current_page.data.title = newsletter.title %>
 
 <h1><%= newsletter.title %></h1>
-------SUBSCRIBE------
+
 <% newsletter.body.each do |e| %>
 	<% case e.item_type.api_key %>
 		<% when "subtitle" %>

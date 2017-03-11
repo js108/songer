@@ -12,12 +12,18 @@
 }
 
 .border-bottom {
-	border-bottom: 1px solid $secondary-color;
+	border-bottom: $border-width solid $secondary-color;
 	margin-bottom: $section-spacing;
 }
 
+.border-right {
+	border-right: $border-width solid $secondary-color;
+	padding-right: 10px;
+	margin-right: 10px;
+}
+
 .border-top {
-	border-top: 1px solid $secondary-color;
+	border-top: $border-width solid $secondary-color;
 	margin-top: $section-spacing;
 	padding-top: $section-spacing;
 }
@@ -35,11 +41,11 @@
 }
 
 .highlight {
-	background: $primary-color;
+	background: $tertiary-color;
 	color: white;
 	display: inline;
 	line-height: 1.4;
-	box-shadow: 5px 0 0 $primary-color, -5px 0 0 $primary-color;
+	box-shadow: 5px 0 0 $tertiary-color, -5px 0 0 $tertiary-color;
     box-decoration-break: clone;
 	a {
 		color: white;
@@ -52,6 +58,10 @@
 	h2 {
 		font-size: 1.1em;
 	}
+}
+
+.float-l {
+	float: left;
 }
 
 .caption {
@@ -72,4 +82,16 @@
 
 .margin-top-0 {
 	margin-top: 0;
+}
+
+.line-height-sm {
+	line-height: .9em;
+}
+
+.margin-top-sm {
+	margin-top: 7px;
+}
+
+.margin-top-minus {
+	margin-top: -.09em;
 }
