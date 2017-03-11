@@ -2,17 +2,17 @@
 title: White Papers
 ---
 
-<h1>White Papers</h1>
+<h1 class="title-border">White Papers</h1>
 <% dato.papers.each do |b| %>
 	<h2><%= link_to b.title, "/papers-full/#{b.title.parameterize}/index.html" %></h2>
 	<div class="excerpt">
-	<% b.body[0...1].each do |e| %>
-		<% case e.item_type.api_key %>	
-		<% when "text" %>
-			<%= markdownify(e.text.truncate_words(108)) %></p>
-		<% when "image" %>
-			<%= image_tag e.image.url(w: 720, fit: :max), alt: e.image.alt %>
+		<% b.body[0...1].each do |e| %>
+			<% case e.item_type.api_key %>	
+			<% when "text" %>
+				<%= markdownify(e.text.truncate_words(108)) %>
+			<% when "image" %>
+				<%= image_tag e.image.url(w: 720, fit: :max), alt: e.image.alt %>
+			<% end %>
 		<% end %>
-	<% end %>
 	</div>
 <% end %>

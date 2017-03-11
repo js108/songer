@@ -1,17 +1,18 @@
 <% current_page.data.title = newsletter.title %>
 
-<h1><%= newsletter.title %></h1>
-
+<h1 class="border-bottom padding-bottom-sm margin-bottom-sm"><%= newsletter.title %></h1>
 <% newsletter.body.each do |e| %>
 	<% case e.item_type.api_key %>
-		<% when "subtitle" %>
-			<h2><%= e.subtitle %></h2>		
+		<% when "caption" %>
+			<div class="caption"><%= e.caption %></div>		
 		<% when "text" %>
 			<%= markdownify(e.text) %>
+		<% when "footnote" %>
+			<div class="border-top margin-top-sm padding-top-sm"><%= markdownify(e.footnote) %></div>
 		<% when "image" %>
 			<%= image_tag e.image.url(w: 720, fit: :max), alt: e.image.alt %>
 		<% when "file" %>
-			<p><%= link_to e.title, e.file.url %></p>
+			<div class="border-top margin-top-sm padding-top-sm"><p><%= link_to e.title, e.file.url %></p></div>
 		<% when "video" %>
 			<%= e.video.url %>
 	<% end %>

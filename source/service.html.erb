@@ -1,6 +1,6 @@
 <% current_page.data.title = service.title %>
 
-<h1><%= service.title %></h1>
+<h1 class="title-border"><%= service.title %></h1>
 <% service.body.each do |e| %>
 	<% case e.item_type.api_key %>
 		<% when "caption" %>

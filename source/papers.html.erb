@@ -2,14 +2,14 @@
 title: White Papers
 ---
 
-<h1>White Papers</h1>
+<h1 class="title-border">White Papers</h1>
 <% dato.papers.sort_by(&:position)[0...3].each do |b| %>
 	<h2><%= link_to b.title, "/papers-full/#{b.title.parameterize}/index.html" %></h2>
 	<div class="excerpt">
 		<% b.body[0...1].each do |e| %>
 			<% case e.item_type.api_key %>	
 			<% when "text" %>
-				<div class="excerpt"><%= markdownify(e.text.truncate_words(108)) %></div>
+				<%= markdownify(e.text.truncate_words(108)) %>
 			<% when "image" %>
 				<%= image_tag e.image.url(w: 720, fit: :max), alt: e.image.alt %>
 			<% end %>
@@ -17,7 +17,7 @@ title: White Papers
 	</div>
 <% end %>
 
-<%= partial "sub" %>
+<a name="subscribe"><%= partial "sub" %></a>
 
 <% dato.papers.sort_by(&:position)[3...100].each do |b| %>
 	<h2><%= b.title %></h2>
@@ -25,10 +25,11 @@ title: White Papers
 		<% b.body[0...1].each do |e| %>
 			<% case e.item_type.api_key %>	
 			<% when "text" %>
-				<div class="excerpt"><%= markdownify(e.text.truncate_words(108)) %></div>
+				<%= markdownify(e.text.truncate_words(108)) %>	
 			<% when "image" %>
 				<%= image_tag e.image.url(w: 720, fit: :max), alt: e.image.alt %>
 			<% end %>
 		<% end %>
+		<p><a href="#subscribe">Subscribe to read this Paper</a></p>
 	</div>
 <% end %>

@@ -1,6 +1,6 @@
 <% current_page.data.title = paper.title %>
 
-<h1><%= paper.title %></h1>
+<h1 class="title-border"><%= paper.title %></h1>
 <% paper.body[0...1].each do |e| %>
 	<% case e.item_type.api_key %>
 		<% when "caption" %>
