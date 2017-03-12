@@ -72,6 +72,10 @@
 	margin-top: -.11em;
 }
 
+.margin-left-sm {
+	margin-left: 5px;
+}
+
 .border-right {
 	border-right: $border-width solid $secondary-color;
 	padding-right: 10px;
@@ -86,20 +90,13 @@
 	background: $tertiary-color;
 	color: white;
 	display: inline;
-	line-height: 1.4;
+	padding: .1em 0;
+	line-height: 1.6;
 	box-shadow: 5px 0 0 $tertiary-color, -5px 0 0 $tertiary-color;
     box-decoration-break: clone;
 	a {
 		color: white;
 	}
-}
-
-.preview {
-	background: $secondary-color;
-	color: white;
-	line-height: 1.4;
-	box-shadow: 5px 0 0 $secondary-color, -5px 0 0 $secondary-color;
-    box-decoration-break: clone;
 }
 
 .excerpt {	
@@ -118,6 +115,7 @@
 	font-family: $header-font;
 	font-weight: bold;
 	font-size: .8em;
+	margin-bottom: 1em;
 }
 
 .flex-container {
