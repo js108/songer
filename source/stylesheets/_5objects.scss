@@ -72,8 +72,8 @@
 	margin-top: -.11em;
 }
 
-.margin-left-sm {
-	margin-left: 5px;
+.margin-sides-sm {
+	margin: 0 5px;
 }
 
 .border-right {
@@ -122,10 +122,6 @@
 	display: flex;
 	align-items: center;
 	flex-wrap: wrap;
-}
-
-.center-text {
-	text-align: center;
 }
 
 .line-height-sm {

@@ -3,7 +3,12 @@
 <h1><%= dato.paper_home.title %></h1>
 <h3 class="margin-top-0 border-bottom padding-bottom-sm margin-bottom-sm"><%= markdownify(dato.paper_home.body) %></h2>
 <% dato.papers.sort_by(&:position)[0...1].each do |b| %>
-	<h2><span class="highlight">Free Preview</span></p><%= link_to b.title, "/papers-full/#{b.title.parameterize}/index.html" %></h2>
+	<h2>
+		<div class="margin-sides-sm"> 
+			<span class="highlight">Preview</span>
+		</div>
+		<%= link_to b.title, "/papers-full/#{b.title.parameterize}/index.html" %>
+	</h2>
 	<div class="excerpt">
 		<% b.body[0...1].each do |e| %>
 			<% case e.item_type.api_key %>	

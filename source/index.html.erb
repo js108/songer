@@ -34,7 +34,7 @@ title: Product-Oriented Coffee Specialists
 
 <!-- Papers Section -->
 	<section class="border-bottom padding-bottom margin-bottom">
-		<div class="row">
+		<div class="row padding-bottom-sm">
 			<div class="full">
 				<h2 class="float-l margin-top-0 line-height-sm">
 					<a class="border-right" href="/papers"><%= dato.paper_home.title %></a>
@@ -46,14 +46,15 @@ title: Product-Oriented Coffee Specialists
 		<div class="row">
 			<% dato.papers.sort_by(&:position)[0...1].each do |paper| %>
 				<div class="card">
-					<h3>
-						<div class="margin-left-sm"><span class="highlight">Free Preview</span></div>
-						<a href="/papers-full/<%= "#{paper.title.parameterize}" %>/index.html"><%= paper.title %>
-					</h3>
-					<% home_i = paper.home_image %>
-					<% if home_i %>
-						<%= image_tag home_i.url(w: 600, fit: :max), alt: home_i.alt %>
-					<% end %>
+					<a href="/papers-full/<%= "#{paper.title.parameterize}" %>/index.html">
+						<h3>
+							<span class="margin-sides-sm highlight">Preview</span>
+							<%= paper.title %>
+						</h3>
+						<% home_i = paper.home_image %>
+						<% if home_i %>
+							<%= image_tag home_i.url(w: 600, fit: :max), alt: home_i.alt %>
+						<% end %>
 					</a>
 				</div>
 			<% end %>
@@ -99,7 +100,7 @@ title: Product-Oriented Coffee Specialists
 
 <!-- newsletters Section -->
 	<section>
-		<div class="row">
+		<div class="row padding-bottom-sm">
 			<div class="full">
 				<h2 class="float-l margin-top-0 line-height-sm"><a class="border-right" href="/papers"><%= dato.newsletter_home.title %></a></h2>
 				<div class="margin-top-minus"><%= markdownify(dato.newsletter_home.body) %></div>
