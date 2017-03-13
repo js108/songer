@@ -4,8 +4,8 @@
 <h3 class="margin-top-0 border-bottom padding-bottom-sm margin-bottom-sm"><%= markdownify(dato.paper_home.body) %></h2>
 <% dato.papers.sort_by(&:position)[0...1].each do |b| %>
 	<h2>
-		<div class="margin-sides-sm"> 
-			<span class="highlight">Preview White Paper</span>
+		<div class="margin-left-sm"> 
+			<span class="highlight">Preview</span>
 		</div>
 		<%= link_to b.title, "/papers-full/#{b.title.parameterize}/index.html" %>
 	</h2>

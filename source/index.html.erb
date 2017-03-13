@@ -11,7 +11,7 @@ title: Product-Oriented Coffee Specialists
 <!--intro section-->
 	<section class="border-bottom padding-bottom margin-bottom">
 		<div class="row flex-container">
-			<div class="left"><%= image_tag dato.about_home.image.url %></div>
+			<div class="left"><%= image_tag dato.pullquote_home.image.url %></div>
 			<div class="right">
 			<h1 class="highlight"><%= dato.pullquote_home.pullquote %></h1>
 			</div>
@@ -48,7 +48,7 @@ title: Product-Oriented Coffee Specialists
 				<div class="card">
 					<a href="/papers-full/<%= "#{paper.title.parameterize}" %>/index.html">
 						<h3>
-							<span class="margin-sides-sm highlight">Preview</span>
+							<span class="margin-left-sm margin-right-sm highlight">Preview</span>
 							<%= paper.title %>
 						</h3>
 						<% home_i = paper.home_image %>
