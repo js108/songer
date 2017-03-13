@@ -5,7 +5,7 @@
 <% dato.papers.sort_by(&:position)[0...1].each do |b| %>
 	<h2>
 		<div class="margin-sides-sm"> 
-			<span class="highlight">Preview</span>
+			<span class="highlight">Preview White Paper</span>
 		</div>
 		<%= link_to b.title, "/papers-full/#{b.title.parameterize}/index.html" %>
 	</h2>
