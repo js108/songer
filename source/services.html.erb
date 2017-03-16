@@ -5,7 +5,8 @@ title: Services
 <h1 class="border-bottom padding-bottom-sm margin-bottom-sm">Services</h1>
 
 <% dato.services.each do |b| %>
-	<h2><%= link_to b.title, "/services/#{b.title.parameterize}/index.html" %></h2>
+<a name="<%= b.title %>"></a>
+	<h2><%= b.title %></h2>
 	<% b.body.each do |e| %>
 		<% case e.item_type.api_key %>
 		<% when "subtitle" %>
@@ -21,3 +22,4 @@ title: Services
 		<% end %>
 	<% end %>
 <% end %>
+
