@@ -46,26 +46,25 @@ title: Product-Oriented Coffee Specialists
 		<div class="row">
 			<% dato.papers.sort_by(&:position)[0...1].each do |paper| %>
 				<div class="card">
-					<a href="/papers-full/<%= "#{paper.title.parameterize}" %>/index.html">
-						<h3>
-							<span class="margin-left-sm margin-right-sm highlight">Preview</span>
-							<%= paper.title %>
-						</h3>
+					<h3><a href="/papers-full/<%= "#{paper.title.parameterize}" %>/index.html">
 						<% home_i = paper.home_image %>
 						<% if home_i %>
 							<%= image_tag home_i.url(w: 600, fit: :max), alt: home_i.alt %>
 						<% end %>
+							<span class="margin-left-sm margin-right-sm highlight">Preview</span>
+							<%= paper.title %>
+						</h3>
 					</a>
 				</div>
 			<% end %>
 			<% dato.papers.sort_by(&:position)[1...3].each do |paper| %>
 				<div class="card">
-					<h3><a href="/papers/<%= "#{paper.title.parameterize}" %>/index.html"><%= paper.title %></h3>
+					<h3><a href="/papers/<%= "#{paper.title.parameterize}" %>/index.html">
 					<% home_i = paper.home_image %>
 					<% if home_i %>
 						<%= image_tag home_i.url(w: 600, fit: :max), alt: home_i.alt %>
 					<% end %>
-					</a>
+					<%= paper.title %></h3></a>
 				</div>
 			<% end %>
 		</div>
@@ -73,12 +72,12 @@ title: Product-Oriented Coffee Specialists
 		<div class="row">
 			<% dato.papers.sort_by(&:position)[3...6].each do |paper| %>
 				<div class="card">
-					<h3><a href="/papers/<%= "#{paper.title.parameterize}" %>/index.html"><%= paper.title %></h3>
+					<h3><a href="/papers/<%= "#{paper.title.parameterize}" %>/index.html">
 					<% home_i = paper.home_image %>
 					<% if home_i %>
 						<%= image_tag home_i.url(w: 600, fit: :max), alt: home_i.alt %>
 					<% end %>
-					</a>
+					<%= paper.title %></h3></a>
 				</div>
 			<% end %>
 		</div>
@@ -86,12 +85,12 @@ title: Product-Oriented Coffee Specialists
 		<div class="row">
 			<% dato.papers.sort_by(&:position)[6...9].each do |paper| %>
 				<div class="card">
-					<h3><a href="/papers/<%= "#{paper.title.parameterize}" %>/index.html"><%= paper.title %></h3>
+					<h3><a href="/papers/<%= "#{paper.title.parameterize}" %>/index.html">
 					<% home_i = paper.home_image %>
 					<% if home_i %>
 						<%= image_tag home_i.url(w: 600, fit: :max), alt: home_i.alt %>
 					<% end %>
-					</a>
+					<%= paper.title %></h3></a>
 				</div>
 			<% end %>
 		</div>
