@@ -8,6 +8,7 @@
 
 .nav {
     padding: 0;
+    margin: 0;
     list-style-type: none;
 }
 
@@ -94,7 +95,7 @@
 	background: $tertiary-color;
 	color: white;
 	display: inline;
-	padding: .1em 0;
+	padding: .05em 0;
 	line-height: 1.6;
 	box-shadow: 5px 0 0 $tertiary-color, -5px 0 0 $tertiary-color;
     box-decoration-break: clone;
@@ -132,4 +133,11 @@
 	line-height: .9em;
 }
 
+.footer__section {
+	padding-bottom: $space;
+
+	&:last-of-type {
+		padding: 0;
+	}
+}
 
