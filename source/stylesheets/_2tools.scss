@@ -40,7 +40,6 @@ body {
     .mid-col { @include grid-column(10); }
     .full { @include grid-column(12); }
     .footer__section { @include grid-column(4); }
-    .footer__section-sm { @include grid-column(3); }
     .left-push {@include grid-push(1); }
     .collapse { @include grid-collapse; }
   }
