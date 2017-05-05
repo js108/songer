@@ -16,7 +16,7 @@ gem 'middleman-livereload', '~> 3.4'
 gem 'middleman-compass'
 
 #DatoCMS
-gem 'middleman-dato'
+gem "middleman-dato", ">=0.7.2"
 
 #Markdown
 gem 'redcarpet'

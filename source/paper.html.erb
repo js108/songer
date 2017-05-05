@@ -1,12 +1,12 @@
 <% current_page.data.title = paper.title %>
 
-<h1 class="border-bottom padding-bottom-sm margin-bottom-sm"><%= paper.title %></h1>
+<h1 class="border-bottom padding-bottom-sm margin-bottom"><%= paper.title %></h1>
 <% paper.body[0...1].each do |e| %>
 	<% case e.item_type.api_key %>		
 		<% when "text" %>
 			<%= markdownify(e.text.truncate_words(108)) %>
 		<% when "image" %>
-			<%= image_tag e.image.url(w: 720, fit: :max), alt: e.image.alt %>
+			<div class="body-image"><%= image_tag e.image.url(w: 720, fit: :max), alt: e.image.alt %></div>
 	<% end %>
 <% end %>
 

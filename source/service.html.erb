@@ -10,7 +10,7 @@
 		<% when "footnote" %>
 			<div class="border-top margin-top-sm padding-top-sm"><%= markdownify(e.footnote) %></div>
 		<% when "image" %>
-			<%= image_tag e.image.url(w: 720, fit: :max), alt: e.image.alt %>
+			<div class="body-image"><%= image_tag e.image.url(w: 720, fit: :max), alt: e.image.alt %></div>
 		<% when "file" %>
 			<div class="border-top margin-top-sm padding-top-sm"><p><%= link_to e.title, e.file.url %></p></div>
 		<% when "video" %>
