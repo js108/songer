@@ -5,12 +5,13 @@
 <% dato.papers.each do |b| %>
 	<h2><%= link_to b.title, "/papers-full/#{b.title.parameterize}/index.html" %></h2>
 	<div class="excerpt">
+		<% if b.home_image != nil %>
+			<div class="margin-top-sm"><%= image_tag b.home_image.url(w: 720, fit: :max), alt: b.home_image.alt %></div>
+		<% end %>
 		<% b.body[0...1].each do |e| %>
 			<% case e.item_type.api_key %>	
 			<% when "text" %>
 				<%= markdownify(e.text.truncate_words(108)) %>
-			<% when "image" %>
-				<%= image_tag e.image.url(w: 720, fit: :max), alt: e.image.alt %>
 			<% end %>
 		<% end %>
 	</div>
