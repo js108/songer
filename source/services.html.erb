@@ -3,25 +3,19 @@ title: Services
 ---
 
 <h1 class="border-bottom padding-bottom-sm margin-bottom-sm">Services</h1>
-
-<% dato.services.each do |b| %>
-<a name="<%= b.title %>"></a>
-	<h2><%= b.title %></h2>
-	<div class="excerpt">
-		<% b.body.each do |e| %>
-			<% case e.item_type.api_key %>
-			<% when "subtitle" %>
-				<h2><%= e.subtitle %></h2>		
-			<% when "text" %>
-				<%= markdownify(e.text) %>
-			<% when "image" %>
-				<div class="body-image"><%= image_tag e.image.url(w: 720, fit: :max), alt: e.image.alt %></div>
-			<% when "file" %>
-				<%= link_to e.title, e.file.url %>
-			<% when "video" %>
-				<%= e.video.url %>
-			<% end %>
-		<% end %>
-	</div>
+<% dato.service.body.each do |e| %>
+	<% case e.item_type.api_key %>
+		<% when "caption" %>
+			<div class="caption"><%= e.caption %></div>		
+		<% when "text" %>
+			<%= markdownify(e.text) %>
+		<% when "footnote" %>
+			<div class="border-top margin-top-sm padding-top-sm"><%= markdownify(e.footnote) %></div>
+		<% when "image" %>
+			<div class="body-image"><%= image_tag e.image.url(w: 720, fit: :max), alt: e.image.alt %></div>
+		<% when "file" %>
+			<div class="border-top margin-top-sm padding-top-sm"><p><%= link_to e.title, e.file.url %></p></div>
+		<% when "video" %>
+			<%= e.video.url %>
+	<% end %>
 <% end %>
-

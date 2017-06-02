@@ -25,11 +25,6 @@ activate :directory_indexes
 #Dato online cms thingy
 activate :dato, token: '7c4e142de73b36220cfa'
 
-ignore "/service.html"
-dato.services.each do |b| 
-  proxy "/services/#{b.title.parameterize}/index.html", "/service.html", locals: { service: b }
-end
-
 ignore "/paper.html"
 dato.papers.each do |b| 
   proxy "/papers/#{b.title.parameterize}/index.html", "/paper.html", locals: { paper: b }
