@@ -34,7 +34,7 @@
 		<% b.body[0...1].each do |e| %>
 			<% case e.item_type.api_key %>	
 			<% when "text" %>
-				<div class=""><%= markdownify(e.text.truncate_words(108)) %>
+				<%= markdownify(e.text.truncate_words(108)) %>
 			<% end %>
 		<% end %>
 		<p><a href="#subscribe">Subscribe to Read This Paper</a></p>
