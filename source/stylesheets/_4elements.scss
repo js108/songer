@@ -1,9 +1,9 @@
 body {
+	font-family: $body-font;
+	color: $text-color;
 	margin: 0 auto;
 	width: 100%;
 	max-width: 960px;
-	font-family: $body-font;
-	color: $text-color;
 }
 
 h1, h2, h3, h4, h5, h6 {

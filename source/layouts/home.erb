@@ -1,8 +1,10 @@
 <!doctype html>
 <html>
   <%= partial "head" %>
-  <body>
-    <%= yield %>
-    <%= partial "footer" %>
+  <body class="bg-image">
+  	<div class="wrap">
+	    <%= yield %>
+	    <%= partial "footer" %>
+    </div>
   </body>
 </html>
