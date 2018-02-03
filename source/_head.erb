@@ -1,7 +1,17 @@
-   <head>
+<head>
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta charset="utf-8">
     <meta content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-46257014-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-46257014-1');
+    </script>
+
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500|Gentium+Book+Basic:400,700" rel="stylesheet">
 
     <!-- Use title if it's in the page YAML frontmatter -->
@@ -10,4 +20,4 @@
     <%= stylesheet_link_tag :site %>
     <%= javascript_include_tag :all %>
     <%= favicon_tag 'images/favicon.ico' %>
-    </head>
+</head>
