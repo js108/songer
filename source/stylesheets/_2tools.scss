@@ -1,11 +1,13 @@
-// Responsive grid settings, works with the 'neat' gem
+// Responsive grid settings, via the 'neat' gem
 
 @import "neat";
+
+$breakpoint: 700px;
 
 $desktop: (
 	columns: 12,
 	gutter: 3rem,
-	media: 600px,
+	media: $breakpoint,
 	color: rgba(#00d4ff, 0.25),
 );
 

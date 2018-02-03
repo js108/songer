@@ -1,6 +1,6 @@
 <% current_page.data.title = dato.about.title %>
 
-<h1 class="border-bottom padding-bottom-sm margin-bottom-sm"><%= dato.about.title %></h1>
+<h1 class="border-bottom padding-bottom-xs margin-bottom-sm"><%= dato.about.title %></h1>
 <% dato.about.body.each do |e| %>
 	<% case e.item_type.api_key %>
 		<% when "caption" %>

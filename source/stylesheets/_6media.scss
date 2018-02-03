@@ -1,0 +1,25 @@
+@media (max-width: $breakpoint) {
+  .wrap {
+    margin-top: 0;
+  }
+
+  .right {
+    margin-top: 10px;
+  }
+
+  .mobile-hide {
+    display: none;
+  }
+
+  .top-nav {
+    .margin-left-sm {
+      margin-left: 0;
+    }
+  }
+  .sidebar {
+    .logo {
+      max-width: 150px;
+    }
+  }
+    
+}

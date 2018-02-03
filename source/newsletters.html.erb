@@ -1,7 +1,10 @@
 <% current_page.data.title = dato.newsletter_home.title %>
 
-<h1><%= dato.newsletter_home.title %></h1>
-<h3 class="margin-top-0 border-bottom padding-bottom-sm margin-bottom-sm"><%= markdownify(dato.newsletter_home.body) %></h2>
+<div class="border-bottom padding-bottom-xs margin-bottom-sm">
+	<h1><%= dato.newsletter_home.title %></h1>
+	<h3 class="margin-top-0"><%= markdownify(dato.newsletter_home.body) %></h2>
+</div>
+
 <% dato.newsletters.sort_by(&:position)[0...1].each do |b| %>
 	<h2><%= link_to b.title, "/newsletters/#{b.title.parameterize}/index.html" %></h2>
 	<div class="excerpt">

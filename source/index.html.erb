@@ -5,7 +5,18 @@ title: Product-Oriented Coffee Specialists
 
 <!--logo section-->
 	<div class="logo row border-bottom margin-bottom">
-		<div class="left"><img src="/images/logo-alt.svg"></div>		
+		<div class="row flex-container">
+		<div class="left"><img src="/images/logo-alt.svg"></div>
+		<div class="right top-nav">
+			<h4 class="margin-top-0 margin-bottom-0">
+				<a class="margin-right-sm mobile-block" href="/about">About</a>  <span class="mobile-hide">|</span>
+				<a class="margin-right-sm margin-left-sm" href="/services">Services</a> <span class="mobile-hide">|</span>
+				<a class="margin-right-sm margin-left-sm" href="/papers">White Papers</a> <span class="mobile-hide">|</span>
+				<a class="margin-right-sm margin-left-sm newsletter" href="/newsletters">Newsletters</a> <span class="mobile-hide newsletter">|</span>
+				<a class="margin-left-sm" href="#footer">Contact</a>
+			</h4>
+		</div>	
+		</div>
 	</div>
 
 <!--intro section-->
@@ -33,7 +44,7 @@ title: Product-Oriented Coffee Specialists
 
 
 <!-- Papers Section -->
-	<section class="border-bottom padding-bottom margin-bottom">
+	<section class="">
 		<div class="row padding-bottom-sm">
 			<div class="full">
 				<h2 class="float-l margin-top-0 line-height-sm">
@@ -98,7 +109,7 @@ title: Product-Oriented Coffee Specialists
 
 
 <!-- newsletters Section -->
-	<section>
+	<section class="newsletter">
 		<div class="row padding-bottom-sm">
 			<div class="full">
 				<h2 class="float-l margin-top-0 line-height-sm"><a class="border-right" href="/newsletters"><%= dato.newsletter_home.title %></a></h2>
@@ -130,5 +141,12 @@ title: Product-Oriented Coffee Specialists
 			<% end %>
 		</div>
 	</section>
+
+	<!--load images for css hero animation-->
+	<div class="hide">
+		<img src="/images/hero1.jpg">
+		<img src="/images/hero2.jpg">
+		<img src="/images/hero3.jpg">
+	</div>
 
 </div>

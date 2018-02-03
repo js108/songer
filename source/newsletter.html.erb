@@ -1,6 +1,6 @@
 <% current_page.data.title = newsletter.title %>
 
-<h1 class="border-bottom padding-bottom-sm margin-bottom-sm"><%= newsletter.title %></h1>
+<h1 class="border-bottom padding-bottom-xs margin-bottom-sm"><%= newsletter.title %></h1>
 <% newsletter.body.each do |e| %>
 	<% case e.item_type.api_key %>
 		<% when "caption" %>
