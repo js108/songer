@@ -1,17 +1,18 @@
 .bg-image {
 	animation: c2 20s infinite;
+	background: url(/images/hero1.jpg) no-repeat center top;
 }
 
 @keyframes c2 {
 
-  0% { background: url(/images/hero1.jpg) center top no-repeat;}
-  13% { background: url(/images/hero1.jpg) center top no-repeat;}
-  21% { background: url(/images/hero2.jpg) center top no-repeat;}
-  47% { background: url(/images/hero2.jpg) center top no-repeat;}
-  54% {background: url(/images/hero3.jpg) center top no-repeat;}
-  80% {background: url(/images/hero3.jpg) center top no-repeat;}
-  87% { background: url(/images/hero1.jpg) center top no-repeat;}
-  100% { background: url(/images/hero1.jpg) center top no-repeat;}
+  0% { background: url(/images/hero1.jpg) no-repeat center top;}
+  13% { background: url(/images/hero1.jpg) no-repeat center top;}
+  21% { background: url(/images/hero2.jpg) no-repeat center top;}
+  47% { background: url(/images/hero2.jpg) no-repeat center top;}
+  54% {background: url(/images/hero3.jpg) no-repeat center top;}
+  80% {background: url(/images/hero3.jpg) no-repeat center top;}
+  87% { background: url(/images/hero1.jpg) no-repeat center top;}
+  100% { background: url(/images/hero1.jpg) no-repeat center top;}
 }
 
 .wrap {
