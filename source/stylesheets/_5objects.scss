@@ -101,6 +101,9 @@
 
 .footer__section {
 	padding-bottom: $space;
+	.nav-contact {
+		display: none;
+	}
 }
 
 .body-image img {
