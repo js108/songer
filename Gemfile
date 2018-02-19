@@ -2,7 +2,7 @@
 # the following line to use 'http://'
 source 'https://rubygems.org'
 
-# ruby "2.3.1"
+# ruby version
 ruby "2.2.9"
 
 # For faster file watcher updates on Windows:
